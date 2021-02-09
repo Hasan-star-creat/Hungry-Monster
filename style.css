@@ -43,7 +43,11 @@ body{
 }
 .food-style{
     display: grid;
-  grid: repeat(2, 300px) / auto-flow 300px;
+   grid-template: "a a a a" 
+               "b b b b" auto;
 }
-
+.image{
+    width: 700px;
+    height: 500px;
+}
 

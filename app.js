@@ -8,14 +8,14 @@
 
  const displayFood = foods => {
       const foodContainer = document.getElementById('food-name');
-      // foodContainer.innerText = ''; // previw data don't store
+       foodContainer.innerText =''; // previw data don't store
       foods.forEach(food => {
           const divFood = document.createElement('div');
            
            divFood.className = 'my-3 p-3 d-flex';
           divFood.innerText = food.strMeal;
           divFood.innerHTML = `
-       <div onclick = "foodDisplyDetails('${food.idMeal}')" class="foodStyle">
+   <div onclick = "foodDisplyDetails('${food.idMeal}')" class="foodStyle">
        <img src="${food.strMealThumb}"> 
        <h5>${food.strMeal}</h5> 
    </div> `
@@ -31,19 +31,43 @@
         .then(data => displayDetails(data.meals))
    }
     
-   const displayDetails = (food) => {
-    const detaisfood = [food[0].strIngredient1, food[0].strIngredient3, food[0].strIngredient4, food[0].strIngredient5, food[0].strIngredient6, food[0].strIngredient7];
+   const displayDetails = (food) => { 
+     //load  detail value
+    
+     console.log(food[0].strMealThumb)
+    const detaisfood = [food[0].strIngredient1, food[0].strIngredient3, food[0].strIngredient4, food[0].strIngredient5, food[0].strIngredient6, food[0].strIngredient2];
+  
+     const detislsHeader = document.getElementById('detisls-header');
+     detislsHeader.innerText = '';
+     const divDetails= document.createElement('div');
+     divDetails.className = 'my-3 p-3 d-flex';
+     divDetails.innerText = food.strMeal;
+     divDetails.innerHTML = `
+           <div>
+           <img class ="image" src="${food[0].strMealThumb}"> 
+           <h5>${food[0].strMeal}</h5> 
+           
+ </div> `
+    // food details style 
+    detislsHeader.appendChild(divDetails);
+    const Details = document.getElementById('details');
+     Details.style.width = "740px";
+     Details.style.backgroundColor = "white";
+     Details.style.borderRadius = " 20px"
+     Details.style.boxShadow = " box-shadow: 5px 5px 10px #8f7f3f";
+     Details.style.padding = " 10px"
+    
+      //get food details ul id
      const divFoodDetails = document.getElementById('food-details');
+     divFoodDetails.innerText = '';
+     divFoodDetails.innerHTML = `
+     <p>Ingredients</p>
+     `;
+      //  forEach loop
      detaisfood.forEach(details => {
-        const li = document.createElement('li');     
+      const li = document.createElement('li');   
         li.innerText = details;
         divFoodDetails.appendChild(li)
       });
-   
-
-            
-            console.log('Ingredients', food);
-            console.log('area', food[0].strIngredient1);
-            console.log('area', food[0].strIngredient1);
 
    }
