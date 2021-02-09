@@ -4,7 +4,13 @@
     fetch(url)
     .then(res => res.json())
     .then(data => displayFood(data.meals))
+    .catch(error => displyerror('went to wrong! please try again later!1'))
  }
+ const displyerror = error => {
+  const Error =  document.getElementById('disply-error');
+   Error.innerText = error; 
+     console.log(error)
+  }
 
  const displayFood = foods => {
       const foodContainer = document.getElementById('food-name');
@@ -29,7 +35,13 @@
         fetch(url)
         .then(res => res.json())
         .then(data => displayDetails(data.meals))
+        .catch(error => displyError('Sorry! i failed to food detaisl, plese try again later!!'))
    }
+     const displyError = error => {
+     const Error =  document.getElementById('disply-error');
+      Error.innerText = error; 
+        console.log(error)
+     }
     
    const displayDetails = (food) => { 
      //load  detail value
@@ -45,7 +57,7 @@
      divDetails.innerHTML = `
            <div>
            <img class ="image" src="${food[0].strMealThumb}"> 
-           <h5>${food[0].strMeal}</h5> 
+           <h5 class = "food-title">${food[0].strMeal}</h5> 
            
  </div> `
     // food details style 
