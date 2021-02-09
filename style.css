@@ -1,17 +1,49 @@
-.bg{
-    background-color: #EDD263;
-   
+body{
+   background-color: #EDD263;
 }
-.header-nav{
-    margin: 0 auto;
+
+.form-control{
+    background-color:rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
 }
-.btn-color{
-    background-color: #3B2D64;
-    color: white;
+.btn{
+    border-radius: 1.5rem;
+    padding: 9px 20px;
 }
-.position{
-    margin: 0 auto;
+
+.btn-privious{
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
 }
 .search-box{
-      width: 350px;
+    position: relative;
 }
+.search-btn {
+    position: absolute;
+    top: 0;
+    right: 0; 
+}
+.foodStyle{
+    border: 1px solid rgb(197, 178, 178);
+    padding: 10px;
+    width: 350px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #8f7f3f;
+   
+}
+.foodStyle img{
+    width: 260px;
+    height: 150px;
+}
+.foodStyle h5{
+    margin-top: 15px;
+}
+.food-style{
+    display: grid;
+  grid: repeat(2, 300px) / auto-flow 300px;
+}
+
+

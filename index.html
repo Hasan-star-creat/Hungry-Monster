@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hungry || Monster</title>
-         <!-- bootstrap css code link-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hungry - monster</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
-      <!--Customize css code link-->
-      <link rel="stylesheet" href="style.css">
+      
+     <!-- customiz css -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-             <header class="container bg">
-                <ul id="first-child" class="nav justify-content-end">
-                      <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Recipes</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Blog</a>
-                    </li>
-                  </ul>
-
-           <nav class="navbar navbar-light">
-            <div class="container-fluid">
-              <form class="d-flex position" >
-                <input class="form-control search-box"  type="search" placeholder="Search For Meal" aria-label="Search">
-                <button class="btn btn-outline-success btn-color" type="submit">Search</button>
-              </form>
+  <div class="container">
+    <main class="content-area">
+        <div class="search-bar col-md-6 mx-auto">
+          
+            <div class="search-box my-5">
+                <input id="search-field" type="text" class="form-control" placeholder="Enter your food">
+                <button onclick="searcFood()" class="btn btn-success search-btn">Search</button>
             </div>
-          </nav>
-     </header>
+        </div>
+         <!-- display error-->
+          <h3 id="disply-error" class="text-danger">
+
+          </h3>
+        <!-- food name  -->
+        <div id="food-name" class="food-style">
+            
+        </div>
+      
+        <div id="song-container" class="search-result col-md-8 mx-auto py-4">
     
+        </div>
+    </main>
+</div>
+ 
+     <!-- Optional JavaScript -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
-
-
-  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+      <!-- customize javaScript -->
+       <script src="app.js"></script>
 </body>
 </html>
